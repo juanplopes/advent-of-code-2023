@@ -1,21 +1,13 @@
 import sys
-
-def translate(line, map):
-    for name, value in map.items():
-        if line.startswith(name):
-            return value
-
-def solve(line, map):
-    digits = [translate(line[i:], map) for i in range(len(line))]
-    digits = [x for x in digits if x is not None]
+def solve(line, names):
+    for i, name in enumerate(names):
+        line = line.replace(name, name[0] + str(i+1) + name[-1])
+    digits = [ord(x) - ord('0') for x in line if '0' <= x <= '9']
     if not len(digits): return 0
     return 10*digits[0] + digits[-1]
 
-NAMES = {name: i+1 for i, name in enumerate(['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'])}
-NUMBERS = {str(i): i for i in range(10)}
-
 total1, total2 = 0, 0
 for line in sys.stdin.read().splitlines():
-    total1 += solve(line, NUMBERS)
-    total2 += solve(line, NUMBERS | NAMES)
+    total1 += solve(line, [])
+    total2 += solve(line, ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'])
 print(total1, total2)
