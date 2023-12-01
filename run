@@ -1,0 +1,16 @@
+#!/bin/bash
+PYTHON_EXECUTABLE=python3
+#PYTHON_EXECUTABLE=/usr/bin/python3
+FILES=${1:-day*.py}
+
+for f in $FILES
+do
+    filename="${f%.*}"
+    lines=$(grep -c '^' $f)
+    number=$(echo ${f//[^0-9]/} | bc)
+
+    echo "------------------"
+    echo "Running $f (day $number)"
+    export TIMEFORMAT="|[Day $number](https://adventofcode.com/2023/day/$number)|[$f](https://github.com/juanplopes/advent-of-code-2023/blob/main/$f)|$lines|%E|"
+    time $PYTHON_EXECUTABLE $f < in/$filename.in
+done
