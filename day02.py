@@ -2,9 +2,9 @@ import sys, math
 
 total1, total2 = 0, 0
 for line in sys.stdin.read().splitlines():
-    game, line = line.split(':')
+    game, draws = line.split(':')
     C = {}
-    for draw in line.split(';'):
+    for draw in draws.split(';'):
         for ball in draw.split(','):
             number, color = ball.split()
             C[color] = max(C.get(color, 0), int(number))
