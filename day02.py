@@ -1,5 +1,4 @@
 import sys
-
 def colors(line):
     D = {}
     for draw in line.split(';'):

@@ -9,5 +9,6 @@ def solve(line, names):
 total1, total2 = 0, 0
 for line in sys.stdin.read().splitlines():
     total1 += solve(line, [])
-    total2 += solve(line, ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'])
+    total2 += solve(line, ['one', 'two', 'three', 'four', 'five', 
+                           'six', 'seven', 'eight', 'nine'])
 print(total1, total2)
