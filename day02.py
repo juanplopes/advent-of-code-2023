@@ -8,6 +8,7 @@ for line in sys.stdin.read().splitlines():
         for ball in draw.split(','):
             number, color = ball.split()
             C[color] = max(C.get(color, 0), int(number))
-    total1 += int(game.split()[1]) if C['red'] <= 12 and C['green'] <= 13 and C['blue'] <= 14 else 0
+    if C['red'] <= 12 and C['green'] <= 13 and C['blue'] <= 14:
+        total1 += int(game.split()[1])
     total2 += math.prod(C.values())
 print(total1, total2)
