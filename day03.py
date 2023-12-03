@@ -12,9 +12,9 @@ for i, row in enumerate(T):
                       T[a][b] not in '0123456789.' }
         else: 
             total1 += number if len(parts) else 0
-            for part in parts: 
-                P[part].append(number)
+            for part in parts: P[part].append(number)
             number = 0
             parts.clear()
-total2 = sum(math.prod(P[(x, y)]) for x, y in P if len(P[x, y]) == 2)
+total2 = sum(math.prod(P[(x, y)]) 
+             for x, y in P if T[x][y] == '*' and len(P[x, y]) == 2)
 print(total1, total2)
