@@ -2,8 +2,9 @@
 
 | Day        | File        | Lines | Time (s)          |
 | ------------- |:-------------:|:-------------:|:-------------:|
-|[Day 1](https://adventofcode.com/2023/day/1)|[day01.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day01.py)|      12|0.115|
-|[Day 2](https://adventofcode.com/2023/day/2)|[day02.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day02.py)|      12|0.075|
-|[Day 3](https://adventofcode.com/2023/day/3)|[day03.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day03.py)|      18|0.089|
-|[Day 4](https://adventofcode.com/2023/day/4)|[day04.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day04.py)|       9|0.082|
-|[Day 5](https://adventofcode.com/2023/day/5)|[day05.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day05.py)|      27|0.083|
+|[Day 1](https://adventofcode.com/2023/day/1)|[day01.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day01.py)|13|0.089|
+|[Day 2](https://adventofcode.com/2023/day/2)|[day02.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day02.py)|13|0.078|
+|[Day 3](https://adventofcode.com/2023/day/3)|[day03.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day03.py)|19|0.087|
+|[Day 4](https://adventofcode.com/2023/day/4)|[day04.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day04.py)|10|0.070|
+|[Day 5](https://adventofcode.com/2023/day/5)|[day05.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day05.py)|28|0.083|
+|[Day 6](https://adventofcode.com/2023/day/6)|[day06.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day06.py)|8|0.408|
