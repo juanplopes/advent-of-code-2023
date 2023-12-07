@@ -12,8 +12,7 @@ def solve(mappings, seed):
         seed = [(a, b) for a, b in translate(mapping, seed) if a<b]
     return min(a for a, b in seed)
 
-def parse(T):
-    i = 3
+def parse(T, i = 3):
     while i < len(T):
         current = []
         while i < len(T) and T[i] != '':
