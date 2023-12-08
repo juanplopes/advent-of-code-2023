@@ -9,9 +9,5 @@ def distance(start, end):
         if start in end: return i
         start = G[start][instr[(i)%len(instr)] == 'R']
 
-def solve(start, end):
-    return math.lcm(*(distance(x, end) for x in start))
-
-print(solve(['AAA'], ['ZZZ']),
-      solve([x for x in G if x[-1] == 'A'],
-            {x for x in G if x[-1] == 'Z'}))
+print(distance('AAA', ['ZZZ']), math.lcm(*(
+    distance(x, {x for x in G if x[-1] == 'Z'}) for x in G if x[-1] == 'A')))
