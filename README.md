@@ -9,4 +9,4 @@
 |[Day 5](https://adventofcode.com/2023/day/5)|[day05.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day05.py)|27|0.083|
 |[Day 6](https://adventofcode.com/2023/day/6)|[day06.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day06.py)|10|0.094|
 |[Day 7](https://adventofcode.com/2023/day/7)|[day07.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day07.py)|10|0.116|
-|[Day 8](https://adventofcode.com/2023/day/8)|[day08.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day08.py)|15|0.104|
+|[Day 8](https://adventofcode.com/2023/day/8)|[day08.py](https://github.com/juanplopes/advent-of-code-2023/blob/main/day08.py)|14|0.118|
