@@ -9,7 +9,7 @@ def solve(row, record):
     def advance(i, j):
         if j >= len(record): return 0
         if len(row) - i < record[j]: return 0
-        if any(x not in '#?' for x in row[i:i+record[j]]): return 0
+        if '.' in row[i:i+record[j]]: return 0
         if len(row) - i == record[j]: return dp(len(row), j+1)
         if row[i+record[j]] not in '.?': return 0
         return dp(i+record[j]+1, j+1)
