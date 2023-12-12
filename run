@@ -11,6 +11,18 @@ do
 
     echo "------------------"
     echo "Running $f (day $number)"
-    export TIMEFORMAT="|[Day $number](https://adventofcode.com/2023/day/$number)|[$f](https://github.com/juanplopes/advent-of-code-2023/blob/main/$f)|$lines|%E|"
-    time $PYTHON_EXECUTABLE $f < in/$filename.in
+
+    export TIMEFORMAT="%E" 
+
+    export PYENV_VERSION=pypy3.9-7.3.10
+    { time $PYTHON_EXECUTABLE $f < in/$filename.in ; } 2> .time.tmp
+    TIME1=$(cat .time.tmp)
+
+    export PYENV_VERSION=3.12.0
+    { time $PYTHON_EXECUTABLE $f < in/$filename.in ; } 2> .time.tmp
+    TIME2=$(cat .time.tmp)
+
+    >&2 echo "|[Day $number](https://adventofcode.com/2023/day/$number)|[$f](https://github.com/juanplopes/advent-of-code-2023/blob/main/$f)|$lines|$TIME1|$TIME2"
 done
+
+
