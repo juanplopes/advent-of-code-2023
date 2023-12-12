@@ -7,6 +7,7 @@ T2 = [('?'.join([x.split()[0]]*5), tuple(map(int, x.split()[1].split(',')))*5) f
 def solve(row, record):
     @functools.cache
     def advance(i, j):
+        if j >= len(record): return 0
         if len(row) - i < record[j]: return 0
         if any(x not in '#?' for x in row[i:i+record[j]]): return 0
         if len(row) - i == record[j]: return dp(len(row), j+1)
@@ -16,7 +17,6 @@ def solve(row, record):
     @functools.cache
     def dp(i, j):
         if i >= len(row): return j >= len(record)
-        if j >= len(record): return all(x in '?.' for x in row[i:])
         if row[i] == '.': return dp(i+1, j)
         if row[i] == '#': return advance(i, j)
         return dp(i+1, j) + advance(i, j)
