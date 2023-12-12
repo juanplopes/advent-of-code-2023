@@ -6,7 +6,7 @@ FILES=${1:-day*.py}
 for f in $FILES
 do
     filename="${f%.*}"
-    lines=$(cat $f | sed '/^\s*$/d' | grep -c '^')
+    lines=$(grep -cve '^\s*$' $f)
     number=$(echo ${f//[^0-9]/} | bc)
 
     echo "------------------"
