@@ -7,7 +7,7 @@ def reflect(V, k, expected):
                for i in range(min(k, len(V) - k))) == expected
 
 def solve(V, expected):
-    return next(iter(({k * reflect([*zip(*V)], k, expected) for k in range(1, len(V[0]))}
-           |{100 * k * reflect(V, k, expected) for k in range(1, len(V))})-{0}), 0)
+    return ([k for k in range(1, len(V[0])) if reflect([*zip(*V)], k, expected)]
+           + [100 * k for k in range(1, len(V)) if reflect(V, k, expected)])[0]
 
 print(sum(solve(x, 0) for x in T), sum(solve(x, 1) for x in T))
